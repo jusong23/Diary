@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B5BF78A287052C900D9E599 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BF789287052C900D9E599 /* Diary.swift */; };
+		9B5BF78C2870535500D9E599 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BF78B2870535500D9E599 /* StarViewController.swift */; };
+		9B5BF78E2870547B00D9E599 /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BF78D2870547B00D9E599 /* StarCell.swift */; };
+		9B5BF790287064C200D9E599 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BF78F287064C200D9E599 /* WriteDiaryViewController.swift */; };
+		9B5BF792287065DA00D9E599 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BF791287065DA00D9E599 /* DiaryDetailViewController.swift */; };
 		9BC0673F287046280062DEE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0673E287046280062DEE1 /* AppDelegate.swift */; };
 		9BC06741287046280062DEE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC06740287046280062DEE1 /* SceneDelegate.swift */; };
 		9BC06743287046280062DEE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC06742287046280062DEE1 /* ViewController.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B5BF789287052C900D9E599 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		9B5BF78B2870535500D9E599 /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
+		9B5BF78D2870547B00D9E599 /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
+		9B5BF78F287064C200D9E599 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
+		9B5BF791287065DA00D9E599 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		9BC0673B287046280062DEE1 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC0673E287046280062DEE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BC06740287046280062DEE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +70,14 @@
 				9BC06740287046280062DEE1 /* SceneDelegate.swift */,
 				9BC06742287046280062DEE1 /* ViewController.swift */,
 				9BC06744287046280062DEE1 /* Main.storyboard */,
+				9B5BF791287065DA00D9E599 /* DiaryDetailViewController.swift */,
+				9B5BF78F287064C200D9E599 /* WriteDiaryViewController.swift */,
+				9B5BF78D2870547B00D9E599 /* StarCell.swift */,
+				9B5BF78B2870535500D9E599 /* StarViewController.swift */,
 				9BC067472870462B0062DEE1 /* Assets.xcassets */,
 				9BC067492870462B0062DEE1 /* LaunchScreen.storyboard */,
 				9BC0674C2870462B0062DEE1 /* Info.plist */,
+				9B5BF789287052C900D9E599 /* Diary.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -139,8 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC06743287046280062DEE1 /* ViewController.swift in Sources */,
+				9B5BF790287064C200D9E599 /* WriteDiaryViewController.swift in Sources */,
+				9B5BF78E2870547B00D9E599 /* StarCell.swift in Sources */,
 				9BC0673F287046280062DEE1 /* AppDelegate.swift in Sources */,
 				9BC06741287046280062DEE1 /* SceneDelegate.swift in Sources */,
+				9B5BF792287065DA00D9E599 /* DiaryDetailViewController.swift in Sources */,
+				9B5BF78A287052C900D9E599 /* Diary.swift in Sources */,
+				9B5BF78C2870535500D9E599 /* StarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

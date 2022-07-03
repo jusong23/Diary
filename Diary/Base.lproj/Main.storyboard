@@ -12,7 +12,6 @@
         <!--일기장-->
         <scene sceneID="z2W-ne-50f">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mlX-Pa-exW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Bvg-yW-L1z" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="일기장" image="folder" catalog="system" selectedImage="folder.fill" id="uwI-f0-TMK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bjr-zf-ol2">
@@ -23,6 +22,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="esz-Zl-loY"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mlX-Pa-exW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-671" y="-372"/>
         </scene>
@@ -75,6 +75,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="6Gf-I4-6Bp" id="pXo-zX-NEG"/>
+                                            <outlet property="titleLabel" destination="jht-lA-jo4" id="naE-GR-D2G"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -91,7 +95,7 @@
                     <navigationItem key="navigationItem" id="cq4-TK-VcV">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="yOe-tE-z0K">
                             <connections>
-                                <segue destination="KOQ-yg-cuQ" kind="push" id="DMi-Kb-yrQ"/>
+                                <segue destination="KOQ-yg-cuQ" kind="push" id="UrL-3M-DCE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -171,8 +175,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기 작성" id="POd-k2-Hpw">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="QWh-9d-eTX"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="QWh-9d-eTX">
+                            <connections>
+                                <action selector="tapConfirmButton:" destination="KOQ-yg-cuQ" id="cGf-3F-i8B"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="QWh-9d-eTX" id="7rs-bU-mVP"/>
+                        <outlet property="contentsTextView" destination="c3L-fi-Mdf" id="wxS-JE-rFN"/>
+                        <outlet property="dateTextField" destination="yZf-OH-xib" id="JoB-2t-vuR"/>
+                        <outlet property="titleTextField" destination="Ah6-Nf-AUG" id="5f8-Nv-Csk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ej-3c-0DI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

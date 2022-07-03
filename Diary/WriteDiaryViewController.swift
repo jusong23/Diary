@@ -49,7 +49,6 @@ class WriteDiaryViewController: UIViewController {
 
     }
     
-    
 //    private func configureInputField() {
 //        self.contentsTextView.delegate = self
         // 제목 내용 날짜 안채워져있으면 못 올리게 ! 근데 얘는 왜 채택함?

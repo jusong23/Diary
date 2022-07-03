@@ -21,7 +21,7 @@ class ViewController: UIViewController{
     }
 
     private func configureColletionView() {
-            self.collectionView.collectionViewLayout = UICollectionViewLayout()
+            self.collectionView.collectionViewLayout = UICollectionViewFlowLayout()
             self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             self.collectionView.delegate = self
             self.collectionView.dataSource = self
@@ -46,17 +46,11 @@ class ViewController: UIViewController{
     }
 
 
-extension ViewController: UICollectionViewDelegate {
-    
-    // MARK: selected
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(indexPath.item)번 Cell 클릭")
-    }
-}
+
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 200) // 행간의 Cell이 2개 표시됨
+        return CGSize(width: (UIScreen.main.bounds.width / 10), height: 150) // 행간의 Cell이 2개 표시됨
     } // sizeForItemAt 메소드 : 셀의 사이즈 찍어내는 메소드
 }
 

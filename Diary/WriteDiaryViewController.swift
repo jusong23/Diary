@@ -46,10 +46,7 @@ class WriteDiaryViewController: UIViewController {
         /*  보내는 곳에서 프로토콜(메소드 & 파라미터 삽입) 설정해 놓고 그 프로토콜 내 메소드를 이 WriteDiaryVC내에서 쓰기 위한 작업이 바로
             weak var delegate: (WriteDiaryViewDelegate)? 인 것이다.
          */
-        
-        debugPrint(self.titleTextField.text)
-        debugPrint(self.contentsTextView.text)
-        debugPrint(self.dateTextField.text)
+
     }
     
     

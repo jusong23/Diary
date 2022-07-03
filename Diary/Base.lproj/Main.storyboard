@@ -34,30 +34,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VyQ-ls-GrR">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u0W-so-lst">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Usp-uG-8im">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OtJ-tQ-Y68">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiaryCell" id="aOj-Me-T4Z" customClass="Diary" customModule="Diary" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiaryCell" id="aAN-9A-dYk" customClass="DiaryCell" customModule="Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xJA-cj-q7V">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dtz-Ej-wEH">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jht-lA-jo4">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tt-b2-BJS">
                                                     <rect key="frame" x="12" y="12" width="156" height="143"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="20. 09. 03 (토)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gf-I4-6Bp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20. 09. 03 (토)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCL-O3-Ug7">
                                                     <rect key="frame" x="12" y="167" width="156" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -65,19 +65,19 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jht-lA-jo4" firstAttribute="top" secondItem="xJA-cj-q7V" secondAttribute="top" constant="12" id="2Xo-1I-z4f"/>
-                                                <constraint firstAttribute="bottom" secondItem="6Gf-I4-6Bp" secondAttribute="bottom" constant="12" id="5Yl-l9-plQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="6Gf-I4-6Bp" secondAttribute="trailing" constant="12" id="6fX-PH-tv1"/>
-                                                <constraint firstItem="jht-lA-jo4" firstAttribute="leading" secondItem="xJA-cj-q7V" secondAttribute="leading" constant="12" id="Ylc-5k-ePp"/>
-                                                <constraint firstItem="6Gf-I4-6Bp" firstAttribute="top" secondItem="jht-lA-jo4" secondAttribute="bottom" constant="12" id="c0X-gG-LKm"/>
-                                                <constraint firstItem="6Gf-I4-6Bp" firstAttribute="leading" secondItem="xJA-cj-q7V" secondAttribute="leading" constant="12" id="vyt-fr-9qP"/>
-                                                <constraint firstAttribute="trailing" secondItem="jht-lA-jo4" secondAttribute="trailing" constant="12" id="yf3-YG-p1L"/>
+                                                <constraint firstItem="kCL-O3-Ug7" firstAttribute="top" secondItem="7tt-b2-BJS" secondAttribute="bottom" constant="12" id="3jZ-3l-bbd"/>
+                                                <constraint firstItem="7tt-b2-BJS" firstAttribute="leading" secondItem="dtz-Ej-wEH" secondAttribute="leading" constant="12" id="8nx-s1-1f4"/>
+                                                <constraint firstAttribute="trailing" secondItem="7tt-b2-BJS" secondAttribute="trailing" constant="12" id="Eku-VK-few"/>
+                                                <constraint firstAttribute="bottom" secondItem="kCL-O3-Ug7" secondAttribute="bottom" constant="12" id="GK9-W7-3Qp"/>
+                                                <constraint firstItem="7tt-b2-BJS" firstAttribute="top" secondItem="dtz-Ej-wEH" secondAttribute="top" constant="12" id="UXW-4Y-fQ1"/>
+                                                <constraint firstItem="kCL-O3-Ug7" firstAttribute="leading" secondItem="dtz-Ej-wEH" secondAttribute="leading" constant="12" id="xF9-2M-62p"/>
+                                                <constraint firstAttribute="trailing" secondItem="kCL-O3-Ug7" secondAttribute="trailing" constant="12" id="zfW-i5-Z65"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
                                         <connections>
-                                            <outlet property="dateLabel" destination="6Gf-I4-6Bp" id="pXo-zX-NEG"/>
-                                            <outlet property="titleLabel" destination="jht-lA-jo4" id="naE-GR-D2G"/>
+                                            <outlet property="dateLabel" destination="kCL-O3-Ug7" id="ubG-zP-Pi8"/>
+                                            <outlet property="titleLabel" destination="7tt-b2-BJS" id="m1Z-QF-2yD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -86,10 +86,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VyQ-ls-GrR" secondAttribute="bottom" id="Hd0-sF-6V2"/>
-                            <constraint firstItem="VyQ-ls-GrR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kq7-Ht-ZwV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VyQ-ls-GrR" secondAttribute="trailing" id="ZLv-ZT-9KF"/>
-                            <constraint firstItem="VyQ-ls-GrR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pk6-C0-KR1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u0W-so-lst" secondAttribute="bottom" id="Dgd-1I-UbL"/>
+                            <constraint firstItem="u0W-so-lst" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QDX-6t-GZx"/>
+                            <constraint firstItem="u0W-so-lst" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yic-sV-hAG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u0W-so-lst" secondAttribute="trailing" id="vWv-ci-L0N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cq4-TK-VcV">
@@ -100,12 +100,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionVIew" destination="VyQ-ls-GrR" id="sq0-7b-WA6"/>
+                        <outlet property="collectionView" destination="u0W-so-lst" id="xCa-EZ-KxZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="-372"/>
+            <point key="canvasLocation" x="92.753623188405811" y="-372.32142857142856"/>
         </scene>
         <!--일기 작성-->
         <scene sceneID="2o5-Bt-H93">

@@ -18,6 +18,14 @@ class ViewController: UIViewController{
         super.viewDidLoad()
     }
 
+    private func configureColletionView() {
+            self.collectionVIew.collectionViewLayout = UICollectionViewLayout()
+            self.collectionVIew.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            self.collectionVIew.delegate = self
+            self.collectionVIew.dataSource = self
+            // collectionVIew 필수 두가지 옵션임
+        } // 콜렉션 뷰 디자인
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let writeDiaryViewController = segue.destination as? WriteDiaryViewController {
             // segue - Push로 뺐으니 prepare 메소드로 받을 준비
@@ -26,6 +34,26 @@ class ViewController: UIViewController{
         }
     } // 보낸 데이터 받을 준비
 }
+
+
+
+extension ViewController: UICollectionViewDataSource {
+    // 아래는 필수 메소드 두개 !
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.diaryList.count
+    } // 콜렉션뷰의 위치에 표시할 셀의 "갯수"[필수 메서드]
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiaryCell", for: indexPath) as? DiaryCell else {return UICollectionViewCell() }
+        let diary = self.diaryList[indexPath.row]
+        cell.titleLabel.text = diary.title
+        cell.dateLabel.text = self.dateToString(date: diary.date) // date형식을 데이트포매터를 이용해 문자열로 반환!
+        return cell
+    } // 콜렉션뷰의 위치에 표시할 셀을 "요청"하는 메소드[필수 메서드]
+    
+    
+} // 콜렉션 뷰로 보여지는 컨텐츠를 관리하는 객체
 
 extension ViewController: WriteDiaryViewDelegate {
     func didSelectRegister(diary: Diary) {

@@ -7,8 +7,12 @@
 
 import UIKit
 
-class WriteDiaryViewController: UIViewController {
+protocol WriteDiaryViewDelegate: AnyObject {
+    func didSelectRegister(diary: Diary)
+} // WriteDiary에서 VC의 UIColletionView로 보낼 준비
+//  AnyObject를 상속하고 , '등록' 버튼이 눌리면 Diary 객체 보낼 프로토콜 정의
 
+class WriteDiaryViewController: UIViewController {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
@@ -17,6 +21,8 @@ class WriteDiaryViewController: UIViewController {
 
     private let datePicker = UIDatePicker()
     private var diaryDate: Date? // 데이트픽커에서 선정된 날짜를 저장하는 곳
+    weak var delegate: (WriteDiaryViewDelegate)?
+    //delegate 프로퍼티 ! 위에 정의 해놓은 프로토콜을 채택하는 것
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +30,28 @@ class WriteDiaryViewController: UIViewController {
         self.configureDatePicker()
 //        self.confirmButton.isEnabled = false
     }
+    
+    @IBAction func tapConfirmButton(_ sender: UIBarButtonItem) {
+        guard let title = self.titleTextField.text else {return}
+        guard let contents = self.contentsTextView.text else {return}
+        guard let date = self.diaryDate else {return}
+        // 각 텍스트필드에 적힌 값들을 옵셔널바인딩(없을수도 있으니)
+
+        let diary = Diary(title: title, contents: contents, date: date, isStar: false)
+        // 구조체에 그 값들을 넣기
+        self.delegate?.didSelectRegister(diary: diary)
+        // delegate의 didSelectRegister 메소드에 diary 객체를 넣어줌
+        self.navigationController?.popViewController(animated: true)
+        // 보낼 준비 끝
+        /*  보내는 곳에서 프로토콜(메소드 & 파라미터 삽입) 설정해 놓고 그 프로토콜 내 메소드를 이 WriteDiaryVC내에서 쓰기 위한 작업이 바로
+            weak var delegate: (WriteDiaryViewDelegate)? 인 것이다.
+         */
+        
+        debugPrint(self.titleTextField.text)
+        debugPrint(self.contentsTextView.text)
+        debugPrint(self.dateTextField.text)
+    }
+    
     
 //    private func configureInputField() {
 //        self.contentsTextView.delegate = self
@@ -58,12 +86,7 @@ class WriteDiaryViewController: UIViewController {
         self.dateTextField.inputView = self.datePicker
     }
     
-    @IBAction func tapConfirmButton(_ sender: Any) {
-        debugPrint(self.titleTextField.text)
-        debugPrint(self.contentsTextView.text)
-        debugPrint(self.dateTextField.text)
 
-    }
     
     @objc private func dataPickerValueDidChange(_ dataPicker: UIDatePicker) {
         let formmater = DateFormatter()
@@ -82,6 +105,8 @@ class WriteDiaryViewController: UIViewController {
 //    private func vailddateInputField() {
 //        self.confirmButton.isEnabled = !(self.titleTextField.text?.isEmpty ?? true) && !(self.dateTextField.text?.isEmpty ?? true) && !self.contentsTextView.text.isEmpty
 //    }
+    
+    
 }
 
 //extension WriteDiaryViewController: UITextViewDelegate {

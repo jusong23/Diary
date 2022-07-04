@@ -46,11 +46,10 @@ class ViewController: UIViewController{
     }
 
 
-
-
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width / 10), height: 150) // 행간의 Cell이 2개 표시됨
+        return CGSize(width: 40, height: 40)
+//        return CGSize(width: (UIScreen.main.bounds.width / 10), height: 40) // 행간의 Cell이 2개 표시됨
     } // sizeForItemAt 메소드 : 셀의 사이즈 찍어내는 메소드
 }
 
@@ -66,9 +65,15 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiaryCell", for: indexPath) as? DiaryCell else {return UICollectionViewCell() }
         debugPrint("")
         let diary = self.diaryList[indexPath.row]
+        let diaryTitleNumber = Int(diary.title) ?? 0
         cell.titleLabel.text = diary.title
         cell.dateLabel.text = self.dateToString(date: diary.date) // date형식을 데이트포매터를 이용해 문자열로 반환!
         
+        if diaryTitleNumber == 1 {
+            cell.backgroundColor = UIColor(red: 100/225, green: 220/225, blue: 220/225, alpha: 1.0)
+        } else {
+            cell.backgroundColor = .blue
+        }
         return cell
     } // 콜렉션뷰의 위치에 표시할 셀을 "요청"하는 메소드[필수 메서드]
     
